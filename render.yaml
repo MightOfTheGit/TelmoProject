@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: telmo-football-tickets
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SEATGEEK_CLIENT_ID
+        sync: false
+      - key: SEATGEEK_CLIENT_SECRET
+        sync: false
+      - key: TICKETMASTER_API_KEY
+        sync: false
