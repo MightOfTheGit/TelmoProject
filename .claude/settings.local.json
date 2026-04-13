@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh --version)",
+      "Bash(git -C /Users/gorriti/projects/TelmoProject rev-parse --is-inside-work-tree)",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(npx:*)",
+      "Bash(rsync -av --exclude='.git' /Users/gorriti/projects/telmo-temp/ /Users/gorriti/projects/TelmoProject/)",
+      "Bash(rm -rf /Users/gorriti/projects/telmo-temp)",
+      "Bash(npm install:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git config:*)"
+    ]
+  }
+}
