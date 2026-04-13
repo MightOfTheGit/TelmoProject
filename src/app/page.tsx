@@ -1,19 +1,17 @@
 'use client';
-import { useRouter } from 'next/navigation';
 import { SearchBar } from '@/components/SearchBar';
 import { SavedSearchesPanel } from '@/components/SavedSearchesPanel';
 import { useSavedSearches } from '@/hooks/useSavedSearches';
 
 export default function HomePage() {
-  const router = useRouter();
   const { savedSearches, removeSearch } = useSavedSearches();
 
   const handleSearch = (query: string) => {
-    router.push(`/results?q=${encodeURIComponent(query)}`);
+    window.location.href = `./results/?q=${encodeURIComponent(query)}`;
   };
 
   const handleRecheck = (query: string) => {
-    router.push(`/results?q=${encodeURIComponent(query)}`);
+    window.location.href = `./results/?q=${encodeURIComponent(query)}`;
   };
 
   return (
